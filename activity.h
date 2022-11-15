@@ -9,6 +9,8 @@
 
 #include "ugraph.h"
 
+
+//COMPLEXITY: O(n)
 template <class Vertex>
 void dfs2(Vertex v, const UnweightedGraph<Vertex>* graph,
     std::set<Vertex> &reached, std::stack<Vertex> &TS) {
@@ -22,6 +24,7 @@ for (auto u : graph->getConnectionFrom(v)) {
 TS.push(v);
 }
 
+//COMPLEXITY: O(n)
 template <class Vertex>
 std::string topologicalSort(const UnweightedGraph<Vertex>* graph) {
       std::set<Vertex> reached;
@@ -39,6 +42,7 @@ std::string topologicalSort(const UnweightedGraph<Vertex>* graph) {
     return aux.str();
 }
 
+//COMPLEXITY: O(n^2)
 template <class Vertex>
 bool isBipartite(const UnweightedGraph<Vertex>* graph) {
 
@@ -70,7 +74,7 @@ bool isBipartite(const UnweightedGraph<Vertex>* graph) {
   }
   return true;
 }
-
+//COMPLEXITY: O(n)
 template <class Vertex>
 bool isCyclic(Vertex v, const UnweightedGraph<Vertex>* graph,
   std::set<Vertex> &reached, Vertex parent) {
@@ -91,6 +95,8 @@ bool isCyclic(Vertex v, const UnweightedGraph<Vertex>* graph,
 
 }
 
+
+//COMPLEXITY: O(n)
 template <class Vertex>
 bool isTree(const UnweightedGraph<Vertex>* graph) {
 
