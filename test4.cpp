@@ -23,7 +23,7 @@ TEST_CASE("testing exercise 3", "[exercise3]") {
 		graph->addEdge(from, to);
 	}
 
-	REQUIRE(topologicalSort(graph) == "[1 4 3 2]");
+	REQUIRE(topologicalSort(graph) == "1 4 3 2 ");
 	REQUIRE(isBipartite(graph) == true);
 	REQUIRE(isTree(graph) == true);
 
